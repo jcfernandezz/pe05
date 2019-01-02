@@ -96,7 +96,9 @@ namespace cfdiPeruOperadorServiciosElectronicos
                 _DocElectronicoLinea03 = _DocElectronicoLinea03 + detalle.Impuesto.ToString("0.00").Replace(",", ".") + "|";
                 _DocElectronicoLinea03 = _DocElectronicoLinea03 + detalle.ImpuestoSelectivo.ToString("0.00").Replace(",", ".") + "|";
                 _DocElectronicoLinea03 = _DocElectronicoLinea03 + detalle.TotalVenta.ToString("0.00").Replace(",", ".") + "|";
-                _DocElectronicoLinea03 += "||||";
+                _DocElectronicoLinea03 += "|";
+                _DocElectronicoLinea03 += detalle.CodigoItem.Trim() +"|";
+                _DocElectronicoLinea03 += "||";
                 _DocElectronicoLinea03 += detalle.TipoImpuesto +"|";
                 _DocElectronicoLinea03 += "|" + Environment.NewLine;
 
